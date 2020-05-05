@@ -1,47 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kyara.springcloud.netflix</groupId>
+	<artifactId>spring-cloud-netflix</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>spring-cloud-netflix</name>
+	<description>Demo project for Spring Boot</description>
 
-    <groupId>com.kyara.springcloud.netflix</groupId>
-    <artifactId>spring-cloud-netflix</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>spring-cloud-netflix</name>
-    <description>Demo project for Spring Boot</description>
+	<modules>
+		<module>eureka-client</module>
+		<module>eureka-server</module>
+	</modules>
 
-    <parent>
-        <groupId>com.kyara.springcloud</groupId>
-        <artifactId>spring-cloud</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-
-    <modules>
-        <module>eureka-server</module>
-    </modules>
-
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>2.2.0.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+	<parent>
+		<groupId>com.kyara.springcloud</groupId>
+		<artifactId>spring-cloud</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
 
 </project>
